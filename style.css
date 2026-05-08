@@ -1,4 +1,7 @@
+/* Pretendard 웹폰트 불러오기 */
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
+/* ================= 전체 기본 설정 ================= */
 
 * {
   margin: 0;
@@ -25,7 +28,9 @@ a {
   overflow: hidden;
 }
 
-/* Header */
+
+/* ================= Header / 상단 메뉴 영역 ================= */
+
 .header {
   height: 78px;
   padding: 0 16px;
@@ -57,18 +62,33 @@ a {
   opacity: 0.5;
 }
 
-/* Hero */
+
+/* ================= Hero / 첫 인트로 영역 ================= */
+
 .hero {
-  padding: 116px 20px 88px;
+  padding: 116px 20px 240px;
   text-align: center;
 }
 
-.hero h2 {
-  font-size: 36px;
+.hero-title {
+  margin-bottom: 80px;
+}
+
+.hero-title-main {
+  display: block;
+  font-size: 40px;
   line-height: 1.35;
-  font-weight: 500;
+  font-weight: 600;
   color: #4a4a4a;
-  margin-bottom: 62px;
+}
+
+.hero-title-sub {
+  display: block;
+  margin-top: 6px;
+  font-size: 34px;
+  line-height: 1.35;
+  font-weight: 400;
+  color: #4a4a4a;
 }
 
 .button {
@@ -89,7 +109,9 @@ a {
   opacity: 0.7;
 }
 
-/* Project Grid */
+
+/* ================= Practice Projects / 연습 작업물 영역 ================= */
+
 .product-section {
   padding: 0 12px 40px;
 }
@@ -102,6 +124,17 @@ a {
 
 .product-card {
   text-align: center;
+}
+
+.product-link {
+  display: block;
+  cursor: pointer;
+  color: inherit;
+  transition: transform 0.25s ease;
+}
+
+.product-link:hover {
+  transform: translateY(-6px);
 }
 
 .product-image {
@@ -117,6 +150,12 @@ a {
   object-fit: cover;
   object-position: center;
   display: block;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+.product-link:hover .product-image img {
+  transform: scale(1.05);
+  opacity: 0.85;
 }
 
 .product-card h3 {
@@ -124,6 +163,11 @@ a {
   font-size: 15px;
   font-weight: 600;
   color: #222;
+  transition: color 0.2s ease;
+}
+
+.product-link:hover h3 {
+  color: #000;
 }
 
 .more-button {
@@ -134,14 +178,17 @@ a {
   color: #111;
   border-bottom: 1px solid #111;
   padding-bottom: 2px;
-  transition: opacity 0.2s;
+  transition: opacity 0.2s ease, letter-spacing 0.2s ease;
 }
 
-.more-button:hover {
-  opacity: 0.5;
+.product-link:hover .more-button {
+  opacity: 0.65;
+  letter-spacing: 0.3px;
 }
 
-/* Practice Button */
+
+/* ================= Practice Button / 연습 작업 전체보기 버튼 ================= */
+
 .practice-button-wrap {
   padding-top: 72px;
   padding-bottom: 36px;
@@ -166,9 +213,11 @@ a {
   opacity: 0.7;
 }
 
-/* Text Section */
+
+/* ================= Text Section / 팀 프로젝트 설명 영역 ================= */
+
 .text-section {
-  padding: 110px 105px 140px;
+  padding: 240px 105px 60px;
   text-align: center;
 }
 
@@ -177,7 +226,7 @@ a {
   line-height: 1.35;
   font-weight: 400;
   color: #4a4a4a;
-  margin-bottom: 44px;
+  margin-bottom: 28px;
 }
 
 .text-section p {
@@ -190,7 +239,9 @@ a {
   white-space: pre-line;
 }
 
-/* Gallery */
+
+/* ================= Gallery / 프로젝트 이미지 갤러리 영역 ================= */
+
 .gallery {
   padding: 24px 12px 0;
   display: grid;
@@ -211,7 +262,175 @@ a {
   color: #333;
 }
 
-/* Footer */
+
+/* ================= Work Detail Page / 작업물 상세 페이지 ================= */
+
+.work-detail {
+  padding: 90px 80px 120px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 48px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #555;
+  transition: opacity 0.2s;
+}
+
+.back-link:hover {
+  opacity: 0.5;
+}
+
+.work-detail-image {
+  width: 100%;
+  background: #f0f0f0;
+  overflow: hidden;
+  margin-bottom: 70px;
+}
+
+.work-detail-image img {
+  width: 100%;
+  display: block;
+}
+
+.work-detail-content {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.work-category {
+  margin-bottom: 18px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #777;
+}
+
+.work-detail-content h2 {
+  margin-bottom: 36px;
+  font-size: 36px;
+  line-height: 1.35;
+  font-weight: 600;
+  color: #222;
+}
+
+.work-detail-content p {
+  margin-bottom: 24px;
+  font-size: 14px;
+  line-height: 1.9;
+  color: #666;
+}
+
+.work-info-list {
+  margin-top: 60px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.work-info-list div {
+  padding: 20px 0;
+  border-bottom: 1px solid #e5e5e5;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  font-size: 13px;
+}
+
+.work-info-list strong {
+  color: #222;
+}
+
+.work-info-list span {
+  color: #777;
+}
+
+
+/* ================= Other Works / 다른 작업물 가로 스크롤 영역 ================= */
+
+.other-works {
+  padding: 0 12px 120px;
+}
+
+.other-works-header {
+  padding: 0 68px 32px;
+}
+
+.other-works-header h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.other-works-header p {
+  font-size: 13px;
+  color: #777;
+}
+
+.other-work-scroll {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  padding: 0 68px 24px;
+  scroll-snap-type: x mandatory;
+}
+
+.other-work-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.other-work-scroll::-webkit-scrollbar-track {
+  background: #eeeeee;
+}
+
+.other-work-scroll::-webkit-scrollbar-thumb {
+  background: #222;
+}
+
+.other-work-card {
+  flex: 0 0 280px;
+  scroll-snap-align: start;
+  display: block;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.other-work-card:hover {
+  transform: translateY(-6px);
+}
+
+.other-work-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  background: #f0f0f0;
+  margin-bottom: 16px;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+.other-work-card:hover img {
+  opacity: 0.85;
+}
+
+.other-work-card strong {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 6px;
+}
+
+.other-work-card span {
+  display: inline-block;
+  font-size: 12px;
+  color: #111;
+  border-bottom: 1px solid #111;
+  padding-bottom: 2px;
+}
+
+
+/* ================= Footer / 하단 정보 영역 ================= */
+
 .footer {
   width: min(1140px, calc(100% - 60px));
   margin: 0 auto 48px;
@@ -259,7 +478,9 @@ a {
   white-space: nowrap;
 }
 
-/* Tablet */
+
+/* ================= Tablet / 태블릿 반응형 ================= */
+
 @media (max-width: 900px) {
   .page,
   .footer {
@@ -285,8 +506,16 @@ a {
     padding: 80px 20px 70px;
   }
 
-  .hero h2 {
-    font-size: 28px;
+  .hero-title {
+    margin-bottom: 52px;
+  }
+
+  .hero-title-main {
+    font-size: 30px;
+  }
+
+  .hero-title-sub {
+    font-size: 26px;
   }
 
   .product-grid {
@@ -313,23 +542,86 @@ a {
     height: 360px;
   }
 
+  .work-detail {
+    padding: 70px 28px 90px;
+  }
+
+  .work-detail-content h2 {
+    font-size: 28px;
+  }
+
+  .other-works-header {
+    padding: 0 28px 28px;
+  }
+
+  .other-work-scroll {
+    padding: 0 28px 24px;
+  }
+
+  .other-work-card {
+    flex-basis: 240px;
+  }
+
   .footer-inner {
     flex-direction: column;
   }
 }
 
-/* Mobile */
+
+/* ================= Mobile / 모바일 반응형 ================= */
+
 @media (max-width: 560px) {
   .product-grid {
     grid-template-columns: 1fr;
   }
 
-  .hero h2 {
-    font-size: 24px;
+  .hero-title {
+    margin-bottom: 44px;
+  }
+
+  .hero-title-main {
+    font-size: 26px;
+  }
+
+  .hero-title-sub {
+    font-size: 22px;
   }
 
   .text-section h2 {
     font-size: 22px;
+  }
+
+  .work-detail {
+    padding: 56px 20px 80px;
+  }
+
+  .work-detail-image {
+    margin-bottom: 48px;
+  }
+
+  .work-detail-content h2 {
+    font-size: 24px;
+  }
+
+  .work-info-list div {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .other-works {
+    padding-bottom: 80px;
+  }
+
+  .other-works-header {
+    padding: 0 20px 24px;
+  }
+
+  .other-work-scroll {
+    padding: 0 20px 24px;
+  }
+
+  .other-work-card {
+    flex-basis: 220px;
   }
 
   .sns {
