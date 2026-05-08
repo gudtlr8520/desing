@@ -628,3 +628,167 @@ a {
     flex-wrap: wrap;
   }
 }
+/* ================= Work Detail Page / 작업물 상세 페이지 ================= */
+
+.work-detail {
+  padding: 90px 80px 120px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 48px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #555;
+  transition: opacity 0.2s;
+}
+
+.back-link:hover {
+  opacity: 0.5;
+}
+
+.work-detail-image {
+  width: 100%;
+  background: #f0f0f0;
+  overflow: hidden;
+  margin-bottom: 70px;
+}
+
+.work-detail-image img {
+  width: 100%;
+  display: block;
+}
+
+.work-detail-content {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.work-category {
+  margin-bottom: 18px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #777;
+}
+
+.work-detail-content h2 {
+  margin-bottom: 36px;
+  font-size: 36px;
+  line-height: 1.35;
+  font-weight: 600;
+  color: #222;
+}
+
+.work-detail-content p {
+  margin-bottom: 24px;
+  font-size: 14px;
+  line-height: 1.9;
+  color: #666;
+}
+
+.work-info-list {
+  margin-top: 60px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.work-info-list div {
+  padding: 20px 0;
+  border-bottom: 1px solid #e5e5e5;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  font-size: 13px;
+}
+
+.work-info-list strong {
+  color: #222;
+}
+
+.work-info-list span {
+  color: #777;
+}
+
+
+/* ================= Other Works / 다른 작업물 가로 스크롤 영역 ================= */
+
+.other-works {
+  padding: 0 12px 120px;
+}
+
+.other-works-header {
+  padding: 0 68px 32px;
+}
+
+.other-works-header h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.other-works-header p {
+  font-size: 13px;
+  color: #777;
+}
+
+.other-work-scroll {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  padding: 0 68px 24px;
+  scroll-snap-type: x mandatory;
+}
+
+.other-work-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.other-work-scroll::-webkit-scrollbar-track {
+  background: #eeeeee;
+}
+
+.other-work-scroll::-webkit-scrollbar-thumb {
+  background: #222;
+}
+
+.other-work-card {
+  flex: 0 0 280px;
+  scroll-snap-align: start;
+  display: block;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.other-work-card:hover {
+  transform: translateY(-6px);
+}
+
+.other-work-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  background: #f0f0f0;
+  margin-bottom: 16px;
+  transition: opacity 0.35s ease;
+}
+
+.other-work-card:hover img {
+  opacity: 0.85;
+}
+
+.other-work-card strong {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 6px;
+}
+
+.other-work-card span {
+  display: inline-block;
+  font-size: 12px;
+  color: #111;
+  border-bottom: 1px solid #111;
+  padding-bottom: 2px;
+}
